@@ -1,0 +1,48 @@
+{
+  "network": {
+    "Token": 0,
+    "Node": "your-node-name",
+    "User": "",
+    "ShareBandwidth": 0,
+    "ServerHost": "<YOUR_SERVER_HOST>",
+    "ServerIP": "<YOUR_SERVER_IP>",
+    "ServerPort": 0,
+    "PublicIPPort": 0
+  },
+  "apps": [
+    {
+      "AppName": "to-your-peer",
+      "Protocol": "tcp",
+      "UnderlayProtocol": "",
+      "PunchPriority": 0,
+      "Whitelist": "",
+      "SrcPort": 54540,
+      "PeerNode": "<YOUR_PEER_NODE>",
+      "DstPort": 5173,
+      "DstHost": "127.0.0.1",
+      "PeerUser": "",
+      "RelayNode": "",
+      "ForceRelay": 0,
+      "Enabled": 1
+    },
+    {
+      "AppName": "to-your-peer",
+      "Protocol": "tcp",
+      "UnderlayProtocol": "",
+      "PunchPriority": 0,
+      "Whitelist": "",
+      "SrcPort": 54541,
+      "PeerNode": "<YOUR_PEER_NODE>",
+      "DstPort": 5174,
+      "DstHost": "127.0.0.1",
+      "PeerUser": "",
+      "RelayNode": "",
+      "ForceRelay": 0,
+      "Enabled": 1
+    }
+  ],
+  "LogLevel": 1,
+  "MaxLogSize": 1048576,
+  "TLSInsecureSkipVerify": true,
+  "Forcev6": false
+}
