@@ -9,6 +9,7 @@
 ```
 .
 ├── p2p/
+│   ├── openp2p               # openp2p 主程序（Linux x86-64 静态二进制，v3.25.11）
 │   ├── config.example.json   # openp2p 配置示例（需填入真实信息）
 │   └── run_openp2p.sh        # 保活启动脚本（配合 supervisord）
 └── https-proxy/
@@ -19,7 +20,8 @@
 
 链路：公网 HTTPS 请求 → 反向代理 → 本地 `127.0.0.1:54540` → openp2p 隧道 → 对端游戏服务。
 
-- `p2p/`：openp2p 客户端配置与保活脚本。openp2p 主程序请自行从官方仓库下载，二进制不入库。
+- `p2p/`：openp2p 客户端主程序（Linux x86-64 静态二进制）、配置示例与保活脚本。
+  主程序来自 [openp2p 官方](https://github.com/openp2p-cn/openp2p)，其他平台请从官方获取对应版本。
 - `https-proxy/main.py`：把公网请求（含 WebSocket 升级）透传到后端端口，健康检查走 `/__health`。
 
 ## 快速开始
